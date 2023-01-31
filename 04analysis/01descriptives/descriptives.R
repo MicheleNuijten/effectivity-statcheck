@@ -221,7 +221,7 @@ violinplot <- melt_data %>%
                                 "1" = "After statcheck implementation")) +
   labs(x = "", y = "", fill = "Time Period",
        title = 
-         "Mean % of (decision) inconsistencies per article with NHST results",
+         "Distribution of % (decision) inconsistencies per article with NHST results",
        subtitle = "A.") + 
   scale_x_discrete(labels =
                      c("0" ="Control Journal", "1" = "Statcheck Journal")) +
@@ -252,7 +252,7 @@ violinplot_trunc <- melt_data %>%
 
 cowplot::plot_grid(violinplot, violinplot_trunc, nrow = 2)
 
-ggsave("04analysis/01descriptives/violin_plots.png", 
+ggsave("04analysis/01descriptives/fig1_violin_plots.png", 
        width = 6.5, height = 5.5, units = "in")
 
 # LINE GRAPH OF MEANS ----------------------------------------------------------
@@ -313,5 +313,5 @@ line_dec_error <- line_data %>%
 
 cowplot::plot_grid(line_error, line_dec_error, nrow = 2)
 
-ggsave("04analysis/01descriptives/line_graph_means.png", 
+ggsave("04analysis/01descriptives/fig2_line_graph_means.png", 
        width = 10, height = 8)
