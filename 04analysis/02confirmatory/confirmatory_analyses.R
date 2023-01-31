@@ -56,13 +56,14 @@ coef <- summary(lm_errors)$coefficients
 b3 <- coef["period:statcheck_journal", "Estimate"]
 b3_round <- round(b3, 2)
 se <- coef["period:statcheck_journal", "Std. Error"]
+se_round <- round(se, 2)
 z <- round(coef["period:statcheck_journal", "z value"], 2)
 p <- round(coef["period:statcheck_journal", "Pr(>|z|)"], 3)
 
 ci_low <- round(b3 - 1.96*se, 2)
 ci_up <- round(b3 + 1.96*se, 2)
 
-cat("b3 = ", b3_round, ", 95% CI = [", ci_low, "; ", ci_up, "], Z = ", z, ", p = ", p,
+cat("b3 = ", b3_round, ", SE = ", se_round, ", 95% CI = [", ci_low, "; ", ci_up, "], Z = ", z, ", p = ", p,
     sep = "")
 
 # ANALYSIS 1: Predict gross inconsistencies ------------------------------------
@@ -114,11 +115,12 @@ coef <- summary(lm_dec_errors)$coefficients
 b3 <- coef["period:statcheck_journal", "Estimate"]
 b3_round <- round(b3, 2)
 se <- coef["period:statcheck_journal", "Std. Error"]
+se_round <- round(se, 2)
 z <- round(coef["period:statcheck_journal", "z value"], 2)
 p <- round(coef["period:statcheck_journal", "Pr(>|z|)"], 3)
 
 ci_low <- round(b3 - 1.96*se, 2)
 ci_up <- round(b3 + 1.96*se, 2)
 
-cat("b3 = ", b3_round, ", 95% CI = [", ci_low, "; ", ci_up, "], Z = ", z, ", p = ", p,
+cat("b3 = ", b3_round, ", SE = ", se_round, ", 95% CI = [", ci_low, "; ", ci_up, "], Z = ", z, ", p = ", p,
     sep = "")
