@@ -8,7 +8,7 @@ This GitHub/OSF project contains files for the project in which we compare the p
 * The OSF project page: https://osf.io/q84jn/
 * The GitHub project page: https://github.com/MicheleNuijten/effectivity-statcheck
 * The preregistration: https://osf.io/umwea
-* The preprint: *coming soon*
+* The preprint: https://psyarxiv.com/bxau9
 
 ## Author roles
 Conceived of idea: Michèle Nuijten (MN), Jelte Wicherts (JW)  
