@@ -10,8 +10,3 @@
 # ignore articles themselves: copyright
 01articles
 
-# for clarity: only sync exploratory analysis about journal pairs for now
-# rest is not referred to in paper yet
-# update later
-04analysis/03exploratory
-!04analysis/03exploratory/01separate_journal_pairs.R

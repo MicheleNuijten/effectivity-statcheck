@@ -1,0 +1,13 @@
+"journal" "period" "articles_with_nhst" "median_nhst_per_article" "mean_perc_errors" "mean_perc_dec_errors"
+"PS" 0 2943 6 8.3 1
+"PS" 1 809 8 6.2 0.3
+"JESP" 0 1998 13 8 1
+"JESP" 1 536 4 4.9 0.1
+"statcheck_total" 0 4941 8 8.2 1
+"statcheck_total" 1 1345 7 5.7 0.2
+"JEPG" 0 1024 15 8.1 0.9
+"JEPG" 1 795 13 8.2 0.7
+"JPSP" 0 589 33 8.3 1
+"JPSP" 1 120 33 7.2 0.4
+"control_total" 0 1613 22 8.2 1
+"control_total" 1 915 14 8 0.7
