@@ -33,6 +33,8 @@ During the first period of this project, all files were stored on a SURFdrive fo
 
 Nearing publication of the preprint in January 2023, we openly shared all relevant files necessary to reproduce our research publicly on GitHub and OSF. 
 
+For the full report (incl. exploratory analyses), we created a new version of statcheck that could deal with a specific type of spaces in JESP articles. We reran statcheck on all articles included in the sample and updated the data and analysis files accordingly. 
+
 Reasons for small changes and updates are either listed below the main overview table or, from January 13 2023 onwards, listed automatically in the form of GitHub commits.
 
 |What?|When?|Who?|	
@@ -45,6 +47,10 @@ Reasons for small changes and updates are either listed below the main overview 
 |Downloaded new sample of articles: JPSP (subsection ASC) 2013-2022|Nov/Dec 2022|TKW|
 |Made list of all ASC titles of JPSP articles in existing sample|Nov/Dec 2022|TKW|
 |Scraped articles with statcheck (incl. refinements to the code)|Dec 2022/Jan 2023|MN|
+|Created new version of statcheck to deal with spacing in JESP|April-June 2023|MN|
+|Scraped articles with new version of statcheck|June 2023|MN|
+|Reran descriptive and confirmatory analyses & updated exploratory analyses|June-July 2023|MN|
+|Wrote and edited full report|July 2023|MN, JW|
 
 ### Small changes and notes
 * 2-12-2022: In JPEG, there were some articles (39 articles in total) without HTML files. So, Afra created a list of articles without HTML files: [https://catnip-ocelot-499.notion.site/Statcheck-io-the-articles-without-HTML-63712ffe996840dfb486b13a74bbed53](https://catnip-ocelot-499.notion.site/Statcheck-io-the-articles-without-HTML-63712ffe996840dfb486b13a74bbed53)
@@ -85,10 +91,15 @@ The file descriptions below are organized in the same way as the components and 
 |:--|:--|:--|
 | 00extract_dates.R   | Helper function with regexes to extract dates                         | MN         |
 | 00extract_pattern.R | Helper function to extract a pattern from text                        | MN         |
-| 00html_to_txt.R     | Helper function to convert html files to plain txt                    | MN         |
+| 00html_to_txt_v2.R     | Helper function to convert html files to plain txt                    | MN         |
 | 00scrape_html_dir.R | Helper function that allows scraping a directory of html files        | MN         |
-| 01scrape_articles.R | Function to run statcheck & scrape additional meta-data from articles | MN         |
-| 02data_wrangling.R  | Function to clean & reorder raw data                                  | MN         |
+| 01scrape_articles_v2.R | Function to run statcheck & scrape additional meta-data from articles | MN         |
+| 02data_wrangling_v2.R  | Function to clean & reorder raw data                                  | MN         |
+|2023-06-01scraped_articles_v2.txt|Raw statcheck data|MN|
+|2023-06-15data_per_article_with_missings.txt|Data organized per article, including articles without NHST results|MN|
+|2023-06-15data_per_article_with_stats.txt|Data organized per article, only including articles with NHST results|MN|
+|2023-06-15data_wrangled_no_missings.txt|Clean data organized per NHST result, only including articles with NHST results|MN|
+|2023-06-15data_wrangled_with_missings.txt|Clean data organized per NHST result, also including articles without NHST results (in these cases, only article level info is in the data frame)|MN|
 
 ### 04 Analysis
 
@@ -96,16 +107,17 @@ The file descriptions below are organized in the same way as the components and 
 
 | File Name | Description| Created By |
 |:--|:--|:--|
-|descriptives.R|Main analysis file to create descriptive statistics, figures, and tables | MN |
+|descriptives_V2.R|Main analysis file to create descriptive statistics, figures, and tables | MN |
 |fig1_violin_plots.png|Figure 1|MN|
 |fig2_line_graph_means.png|Figure 2|MN|
 |table2.txt|Raw data from Table 2|MN|
+|table3.txt|Raw data from Table 3|MN|
 
 #### 02 Confirmatory
 
 | File Name | Description| Created By |
 |:--|:--|:--|
-|confirmatory_analyses.R|Main analysis script for confirmatory analyses|MN|
+|confirmatory_analyses_v2.R|Main analysis script for confirmatory analyses|MN|
 |lm_dec_errors.rda|R data object with output of the multilevel logistic model estimating the probability of a decision error|MN|
 |lm_errors.rda|R data object with output of the multilevel logistic model estimating the probability of an error|MN|
 
@@ -113,4 +125,14 @@ The file descriptions below are organized in the same way as the components and 
 
 | File Name | Description| Created By |
 |:--|:--|:--|
-|01separate_journal_pairs.R|Analysis script to run main analyses for journal pairs separately|MN|
+|bayes_factors.R|Calculating Bayes factors and posterior probabilities|MN|
+|fig3_nr_nhst_over_time.png|Figure 3|MN|
+|fig4_perc_articles_errors_over_time.png|Figure 4|MN|
+|separate_journal_pairs.R|Fit regression models for journal pairs separately|MN|
+|trends_over_time.R|Calculate and visualize trends over time|MN|
+
+### renv
+
+| File Name | Description| Created By |
+|:--|:--|:--|
+|renv (folder), .Rprofile, renv.lock|Files for syncing the same R package versions used in the data analysis|MN|
