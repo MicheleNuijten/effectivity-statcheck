@@ -9,4 +9,5 @@
 
 # ignore articles themselves: copyright
 01articles
+*.html
 
