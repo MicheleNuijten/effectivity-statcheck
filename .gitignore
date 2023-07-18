@@ -10,4 +10,6 @@
 # ignore articles themselves: copyright
 01articles
 *.html
+# don't ignore the README
+!README.html
 
