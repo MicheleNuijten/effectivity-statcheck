@@ -403,6 +403,10 @@ Google docs that could be accessed by MN and JW.</p>
 <p>Nearing publication of the preprint in January 2023, we openly shared
 all relevant files necessary to reproduce our research publicly on
 GitHub and OSF.</p>
+<p>For the full report (incl. exploratory analyses), we created a new
+version of statcheck that could deal with a specific type of spaces in
+JESP articles. We reran statcheck on all articles included in the sample
+and updated the data and analysis files accordingly.</p>
 <p>Reasons for small changes and updates are either listed below the
 main overview table or, from January 13 2023 onwards, listed
 automatically in the form of GitHub commits.</p>
@@ -465,6 +469,28 @@ existing sample</td>
 the code)</td>
 <td align="left">Dec 2022/Jan 2023</td>
 <td align="left">MN</td>
+</tr>
+<tr class="odd">
+<td align="left">Created new version of statcheck to deal with spacing
+in JESP</td>
+<td align="left">April-June 2023</td>
+<td align="left">MN</td>
+</tr>
+<tr class="even">
+<td align="left">Scraped articles with new version of statcheck</td>
+<td align="left">June 2023</td>
+<td align="left">MN</td>
+</tr>
+<tr class="odd">
+<td align="left">Reran descriptive and confirmatory analyses &amp;
+updated exploratory analyses</td>
+<td align="left">June-July 2023</td>
+<td align="left">MN</td>
+</tr>
+<tr class="even">
+<td align="left">Wrote and edited full report</td>
+<td align="left">July 2023</td>
+<td align="left">MN, JW</td>
 </tr>
 </tbody>
 </table>
@@ -630,7 +656,7 @@ removed</td>
 <td align="left">MN</td>
 </tr>
 <tr class="odd">
-<td align="left">00html_to_txt.R</td>
+<td align="left">00html_to_txt_v2.R</td>
 <td align="left">Helper function to convert html files to plain txt</td>
 <td align="left">MN</td>
 </tr>
@@ -641,14 +667,44 @@ html files</td>
 <td align="left">MN</td>
 </tr>
 <tr class="odd">
-<td align="left">01scrape_articles.R</td>
+<td align="left">01scrape_articles_v2.R</td>
 <td align="left">Function to run statcheck &amp; scrape additional
 meta-data from articles</td>
 <td align="left">MN</td>
 </tr>
 <tr class="even">
-<td align="left">02data_wrangling.R</td>
+<td align="left">02data_wrangling_v2.R</td>
 <td align="left">Function to clean &amp; reorder raw data</td>
+<td align="left">MN</td>
+</tr>
+<tr class="odd">
+<td align="left">2023-06-01scraped_articles_v2.txt</td>
+<td align="left">Raw statcheck data</td>
+<td align="left">MN</td>
+</tr>
+<tr class="even">
+<td align="left">2023-06-15data_per_article_with_missings.txt</td>
+<td align="left">Data organized per article, including articles without
+NHST results</td>
+<td align="left">MN</td>
+</tr>
+<tr class="odd">
+<td align="left">2023-06-15data_per_article_with_stats.txt</td>
+<td align="left">Data organized per article, only including articles
+with NHST results</td>
+<td align="left">MN</td>
+</tr>
+<tr class="even">
+<td align="left">2023-06-15data_wrangled_no_missings.txt</td>
+<td align="left">Clean data organized per NHST result, only including
+articles with NHST results</td>
+<td align="left">MN</td>
+</tr>
+<tr class="odd">
+<td align="left">2023-06-15data_wrangled_with_missings.txt</td>
+<td align="left">Clean data organized per NHST result, also including
+articles without NHST results (in these cases, only article level info
+is in the data frame)</td>
 <td align="left">MN</td>
 </tr>
 </tbody>
@@ -673,7 +729,7 @@ meta-data from articles</td>
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">descriptives.R</td>
+<td align="left">descriptives_V2.R</td>
 <td align="left">Main analysis file to create descriptive statistics,
 figures, and tables</td>
 <td align="left">MN</td>
@@ -691,6 +747,11 @@ figures, and tables</td>
 <tr class="even">
 <td align="left">table2.txt</td>
 <td align="left">Raw data from Table 2</td>
+<td align="left">MN</td>
+</tr>
+<tr class="odd">
+<td align="left">table3.txt</td>
+<td align="left">Raw data from Table 3</td>
 <td align="left">MN</td>
 </tr>
 </tbody>
@@ -713,7 +774,7 @@ figures, and tables</td>
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">confirmatory_analyses.R</td>
+<td align="left">confirmatory_analyses_v2.R</td>
 <td align="left">Main analysis script for confirmatory analyses</td>
 <td align="left">MN</td>
 </tr>
@@ -749,14 +810,59 @@ model estimating the probability of an error</td>
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">01separate_journal_pairs.R</td>
-<td align="left">Analysis script to run main analyses for journal pairs
-separately</td>
+<td align="left">bayes_factors.R</td>
+<td align="left">Calculating Bayes factors and posterior
+probabilities</td>
+<td align="left">MN</td>
+</tr>
+<tr class="even">
+<td align="left">fig3_nr_nhst_over_time.png</td>
+<td align="left">Figure 3</td>
+<td align="left">MN</td>
+</tr>
+<tr class="odd">
+<td align="left">fig4_perc_articles_errors_over_time.png</td>
+<td align="left">Figure 4</td>
+<td align="left">MN</td>
+</tr>
+<tr class="even">
+<td align="left">separate_journal_pairs.R</td>
+<td align="left">Fit regression models for journal pairs separately</td>
+<td align="left">MN</td>
+</tr>
+<tr class="odd">
+<td align="left">trends_over_time.R</td>
+<td align="left">Calculate and visualize trends over time</td>
 <td align="left">MN</td>
 </tr>
 </tbody>
 </table>
 </div>
+</div>
+<div id="renv" class="section level3">
+<h3>renv</h3>
+<table>
+<colgroup>
+<col width="33%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">File Name</th>
+<th align="left">Description</th>
+<th align="left">Created By</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">renv (folder), .Rprofile, renv.lock</td>
+<td align="left">Files for syncing the same R package versions used in
+the data analysis</td>
+<td align="left">MN</td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 </div>
