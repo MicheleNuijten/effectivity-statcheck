@@ -3,6 +3,7 @@ rm(list = ls())
 # load packages
 library(tidyverse) 
 library(ggpmisc) # for regression equations in plot
+library(viridis) # for figure colors
 
 # LOAD DATA --------------------------------------------------------------------
 
@@ -20,7 +21,7 @@ data_per_article$journal <- factor(data_per_article$journal, levels = journal_or
 # create general function for the type of plot we're making to save time and
 # avoid errors when changing parameters
 
-make_plot <- function(data, y, color = NULL, perc = TRUE, lm = TRUE,
+make_plot <- function(data, y, color = NULL, shape = NULL, perc = TRUE, lm = TRUE,
                       label.y1 = .1, line = TRUE,
                       ymin = 0, ymax = 100, flag_intervention = TRUE,
                       title = NULL, ylab = NULL){
@@ -35,7 +36,7 @@ make_plot <- function(data, y, color = NULL, perc = TRUE, lm = TRUE,
                                      2017 + 8/12)) # JESP August 2017
   
   data %>%
-    ggplot(aes(x = year_published, y = y, color = color)) +
+    ggplot(aes(x = year_published, y = y, color = color, shape = shape)) +
     {if (line) geom_line()} +
     geom_point() +
     {if(perc) scale_y_continuous(labels = function(x) paste0(x, "%"),
@@ -45,11 +46,18 @@ make_plot <- function(data, y, color = NULL, perc = TRUE, lm = TRUE,
     {if (flag_intervention) geom_vline(data = date_intervention, 
                                        aes(xintercept = year_intervention),
                                         linetype = 2)} +
-    {if(!is.null(color)) scale_color_discrete(name = "",
-                                              breaks = c("perc_art_error",
-                                                         "perc_art_dec_error"),
-                                              labels = c("Inconsistencies",
-                                                         "Decision\nInconsistencies"))} +
+    {if(!is.null(color)) scale_color_viridis(name = "",
+                                             discrete = TRUE,
+                                             begin = .6,
+                                             end = 0,
+                                             breaks = c("perc_art_error",
+                                                        "perc_art_dec_error"),
+                                             labels = c("Inconsistencies",
+                                                        "Decision\nInconsistencies"))} +
+    {if(!is.null(shape)) scale_shape_manual(name = "",
+                                            labels = c("Inconsistencies",
+                                                       "Decision\nInconsistencies"),
+                                            values = c(19, 17))} +
     facet_wrap(~journal) +
     labs(title = title, 
          x = 'Publication Year',
@@ -115,6 +123,7 @@ articles_w_errors <- data_per_article %>%
 make_plot(data = articles_w_errors, y = articles_w_errors$perc, 
           lm = FALSE,
           color = articles_w_errors$type_error,
+          shape = articles_w_errors$type_error,
           title = "% Articles with at least one (decision) inconsistency",
           ymin = 0, ymax = 85)
 
