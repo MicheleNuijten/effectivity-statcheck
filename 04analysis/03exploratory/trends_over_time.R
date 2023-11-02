@@ -13,8 +13,11 @@ data_per_article <- read.table("03data/2023-06-15data_per_article_with_stats.txt
 
 # reorder factor levels in journal to order panels in plots
 journal_order <- c("PS", "JESP", "JEPG", "JPSP")
-data$journal <- factor(data$journal, levels = journal_order)
-data_per_article$journal <- factor(data_per_article$journal, levels = journal_order)
+journal_labels <- c("PS (statcheck; general psychology)", "JESP (statcheck; social psychology)", 
+                    "JEPG (control; general psychology)", "JPSP (control; social psychology)")
+
+data$journal <- factor(data$journal, levels = journal_order, labels = journal_labels)
+data_per_article$journal <- factor(data_per_article$journal, levels = journal_order, labels = journal_labels)
 
 # FUNCTION FOR PLOT ------------------------------------------------------------
 
@@ -29,7 +32,7 @@ make_plot <- function(data, y, color = NULL, shape = NULL, perc = TRUE, lm = TRU
   # create data frame with intervention dates per journal to later be able
   # to add vertical lines at the time of the intervention
   date_intervention <- 
-    data.frame(journal = factor(journal_order),
+    data.frame(journal = factor(journal_order, labels = journal_labels),
                year_intervention = c(2016 + 7/12, # PS July 2016
                                      2017 + 8/12, # JESP August 2017
                                      2016 + 7/12, # PS July 2016
