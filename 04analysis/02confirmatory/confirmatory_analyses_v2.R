@@ -31,8 +31,6 @@ report_model <- function(model){
   return(list(fixed = coef2, random = random))
 }
 
-report_model(model1)
-
 # ANALYSIS 1: Predict inconsistencies ------------------------------------------
 
 # fit multilevel logistic model
