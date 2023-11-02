@@ -53,7 +53,7 @@ Reasons for small changes and updates are either listed below the main overview 
 |Wrote and edited full report|July 2023|MN, JW|
 
 ### Small changes and notes
-* 2-12-2022: In JPEG, there were some articles (39 articles in total) without HTML files. So, Afra created a list of articles without HTML files: [https://catnip-ocelot-499.notion.site/Statcheck-io-the-articles-without-HTML-63712ffe996840dfb486b13a74bbed53](https://catnip-ocelot-499.notion.site/Statcheck-io-the-articles-without-HTML-63712ffe996840dfb486b13a74bbed53)
+* 2-12-2022: In JEPG, there were some articles (39 articles in total) without HTML files. So, Afra created a list of articles without HTML files: [https://osf.io/mukxc](https://osf.io/mukxc)
 * 13-12-2022: MN realized that there was a mistake in the downloading instructions and JESP 2003-2013 weren’t downloaded yet. These remaining articles were downloaded by MN & AK between 13-12 and 19-12.
 * 20-12-2022 to 23-12-2022: MN fixed issues with scraping dates from articles. JESP’s dates weren’t read by original regexes in code.
 * 23-12-2022: when analyzing descriptives, MN realized that 28 articles from JEPG published in 2013 had no “date received” information, because they were just the abstracts, not the full files. Redownloaded these.
