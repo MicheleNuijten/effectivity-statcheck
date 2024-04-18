@@ -8,8 +8,8 @@ library(lme4)
 
 # LOAD DATA --------------------------------------------------------------------
 
-data <- read.table("03data/2023-06-15data_wrangled_no_missings.txt", header = TRUE)
-data_per_article <- read.table("03data/2023-06-15data_per_article_with_stats.txt", header = TRUE)
+data <- read.table("03data/2024-04-15data_wrangled_no_missings.txt", header = TRUE)
+data_per_article <- read.table("03data/2024-04-15data_per_article_with_stats.txt", header = TRUE)
 
 # ANALYSIS 1: Predict inconsistencies ------------------------------------------
 
@@ -53,18 +53,18 @@ bf1 <- BF(x = c(period_x_journal =
 bf1
 
 # Posterior probabilities:
-#     Pr(hypothesis|data)
+#   Pr(hypothesis|data)
 # H1                   1
 # H2                   0
 # 
 # Evidence matrix (Bayes factors):
-#    H1          H2
-# H1  1 87609295257
-# H2  0           1
+#   H1           H2
+# H1  1 115891448317
+# H2  0            1
 # 
 # Hypotheses:
 #   H1: period_x_journal<0
-#   H2: complement
+# H2: complement
 
 # ANALYSIS 2: Predict decision inconsistencies ------------------------------------------
 
@@ -86,15 +86,15 @@ bf2 <- BF(x = c(period_x_journal =
 bf2
 
 # Posterior probabilities:
-#    Pr(hypothesis|data)
-# H1               0.992
-# H2               0.008
+#   Pr(hypothesis|data)
+# H1               0.991
+# H2               0.009
 # 
 # Evidence matrix (Bayes factors):
-#       H1      H2
-# H1 1.000 117.584
+#   H1      H2
+# H1 1.000 110.249
 # H2 0.009   1.000
 # 
 # Hypotheses:
 #   H1: period_x_journal<0
-#   H2: complement
+# H2: complement

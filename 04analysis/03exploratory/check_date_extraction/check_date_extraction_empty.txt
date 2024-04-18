@@ -1,0 +1,51 @@
+"source"	"journal"	"date_received"	"year_published"
+"Improving the past and the future  A temporal asymmetry in hypothetical thi...  EBSCOhost"	"JEPG"	"2011-12-16"	2013
+"Can a Self-Propelled Box Have a Goal "	"PS"	"2003-12-01"	2005
+"ps_2020_31_09_martin_revisiting-the-suffixing"	"PS"	"2019-12-06"	2020
+"jsep_2021_96_silver_wise-teamwork-collective"	"JESP"	"2020-12-20"	2021
+"ps_2014_25_02_sugimori_brain-mechanisms-underlying"	"PS"	"2013-03-21"	2014
+"When self-destructive thoughts flash through the mind  Failure to meet stan...  EBSCOhost"	"JPSP"	"2010-03-29"	2011
+"jsep_2009_45_01_zell_self-evaluative-effects"	"JESP"	"2008-10-20"	2009
+"ps_2014_25_06_tay_living-among-the"	"PS"	"2013-05-24"	2014
+"Too calloused to care  An experimental examination of factors influencing y...  EBSCOhost"	"JEPG"	"2011-09-26"	2013
+"jsep_2016_62_blackman_egocentrism-and-vicarious"	"JESP"	"2014-12-20"	2016
+"ps_2021_32_04_groot_titrating-the-smell"	"PS"	"2020-03-05"	2021
+"How to Seem Telepathic"	"PS"	"2009-03-17"	2010
+"Low Self-Control Promotes the Willingness to Sacrifice in Close Relationships"	"PS"	"2012-08-14"	2013
+"What Can We Learn From Monkeys About Orthographic Processing in Humans  A Reply to Ziegler et al."	"PS"	"2013-01-25"	2013
+"Why and when peer prediction is superior to self-prediction  The weight giv...  EBSCOhost"	"JPSP"	"2011-09-07"	2012
+"Blood Pressure and Cognitive Function"	"PS"	"2012-12-10"	2013
+"Happiness versus sadness as a determinant of thought confidence in persuasi...  EBSCOhost"	"JPSP"	"2006-02-02"	2007
+"jpeg_2022_151_08_desai_decomposing-preferences-into"	"JEPG"	"2020-09-11"	2022
+"What Can We Learn From Humans About Orthographic Processing in Monkeys  A Reply to Frost and Keuleers (2013)"	"PS"	"2013-03-04"	2013
+"jpsp_2018_115_02_erbas_why_i_dont"	"JPSP"	"2017-06-13"	2018
+"ps_2022_33_06_givon_can-feelings-feel"	"PS"	"2020-12-30"	2022
+"jpeg_2021_150_06_hedgcock_counterfactual-thinking-and"	"JEPG"	"2020-01-19"	2021
+"jpeg_2022_151_11_isbilen_statistically-based-chunking"	"JEPG"	"2021-05-20"	2022
+"ps_2018_29_01_pramond_symmetric-objects-become"	"PS"	"2017-03-28"	2018
+"Overcoming the Negative Consequences of Interference From Recognition Memory Testing"	"PS"	"2011-05-27"	2012
+"jsep_2010_46_03_chernyak_being-excluded-by"	"JESP"	"2009-10-28"	2010
+"The Wickelgren Power Law and the Ebbinghaus Savings Function"	"PS"	"2006-04-26"	2007
+"On the respective contributions of awareness of unconditioned stimulus vale...  EBSCOhost"	"JPSP"	"2008-09-16"	2009
+"No evidence of intelligence improvement after working memory training  A ra...  EBSCOhost"	"JEPG"	"2011-07-03"	2013
+"ps_2022_33_03_brandt_acting-like-a"	"PS"	"2020-12-10"	2022
+"Must psychologists change the way they analyze their data   EBSCOhost"	"JPSP"	"2011-02-05"	2011
+"ps_2018_29_04_cuddy_p-curving-a"	"PS"	"2017-08-25"	2018
+"ps_2022_33_10_carozza_testing-deprivation-and"	"PS"	"2021-11-12"	2022
+"jpeg_2019_148_03_camilleri_the-collective-aggregation"	"JEPG"	"2017-03-17"	2019
+"The Busy Social Brain"	"PS"	"2012-01-19"	2013
+"Visual Prosody and Speech Intelligibility"	"PS"	"2002-10-14"	2004
+"ps_2020_31_09_binning_changing-social-contexts"	"PS"	"2019-04-08"	2020
+"Measuring the Prevalence of Questionable Research Practices With Incentives for Truth Telling"	"PS"	"2011-05-20"	2012
+"jsep_2008_44_04_halberstadt_carryover-effects-of"	"JESP"	"2006-10-20"	2008
+"Spatial Resolution of Conscious Visual Perception in Infants"	"PS"	"2009-08-13"	2010
+"jpeg_2014_143_01_fisher_the-illusion-of"	"JEPG"	"2012-08-30"	2014
+"Priming a New Identity  Self-Monitoring Moderates the Effects of Nonself Pr...  EBSCOhost"	"JPSP"	"2004-02-19"	2005
+"I want to be creative  Exploring the role of hedonic contingency theory in ...  EBSCOhost"	"JPSP"	"2006-06-15"	2008
+"jsep_2020_91_livingstone_do-you-get"	"JESP"	"2020-01-06"	2020
+"Temporal Distance and Discrimination"	"PS"	"2011-09-20"	2012
+"ps_2015_26_07_grant_prenatal-programming-of"	"PS"	"2014-07-15"	2015
+"jsep_2020_90_mello_the-influence-of"	"JESP"	"2019-10-24"	2020
+"jsep_2013_49_01_elliot_red-enhances-womens"	"JESP"	"2012-11-20"	2013
+"Shared Visual Attention Reduces Hindsight Bias"	"PS"	"2011-09-14"	2012
+"jpeg_2015_144_04_kreuzbauer_the-mind-in"	"JEPG"	"2014-09-23"	2015

@@ -8,8 +8,8 @@ library(viridis) # for figure colors
 # LOAD DATA --------------------------------------------------------------------
 
 # data for articles with statistics
-data <- read.table("03data/2023-06-15data_wrangled_no_missings.txt", header = TRUE)
-data_per_article <- read.table("03data/2023-06-15data_per_article_with_stats.txt", header = TRUE)
+data <- read.table("03data/2024-04-15data_wrangled_no_missings.txt", header = TRUE)
+data_per_article <- read.table("03data/2024-04-15data_per_article_with_stats.txt", header = TRUE)
 
 # reorder factor levels in journal to order panels in plots
 journal_order <- c("PS", "JESP", "JEPG", "JPSP")
@@ -80,17 +80,17 @@ make_plot <- function(data, y, color = NULL, shape = NULL, perc = TRUE, lm = TRU
 #           title = "% Articles in which statcheck detected NHST results") 
 
 # NR NHST OVER TIME ------------------------------------------------------------
-
-mean_nr_nhst_df <- data_per_article %>%
-  group_by(journal, year_published) %>%
-  summarize(mean_nhst = mean(nr_nhst, na.rm = TRUE))
-
-make_plot(data = mean_nr_nhst_df, y = mean_nr_nhst_df$mean_nhst, perc = FALSE,
-          title = "Mean nr. of NHST results in an article for articles with NHST results",
-          label.y1 = .95, ylab = "Nr. of NHST results")
-
-ggsave("04analysis/03exploratory/fig3_nr_nhst_over_time.png", 
-       width = 6.5, height = 4.5, units = "in")
+# 
+# mean_nr_nhst_df <- data_per_article %>%
+#   group_by(journal, year_published) %>%
+#   summarize(mean_nhst = mean(nr_nhst, na.rm = TRUE))
+# 
+# make_plot(data = mean_nr_nhst_df, y = mean_nr_nhst_df$mean_nhst, perc = FALSE,
+#           title = "Mean nr. of NHST results in an article for articles with NHST results",
+#           label.y1 = .95, ylab = "Nr. of NHST results")
+# 
+# ggsave("04analysis/03exploratory/fig3_nr_nhst_over_time.png", 
+#        width = 6.5, height = 4.5, units = "in")
 
 # PERC (DEC) INCONS OVER TIME --------------------------------------------------
 # 
@@ -130,5 +130,5 @@ make_plot(data = articles_w_errors, y = articles_w_errors$perc,
           title = "% Articles with at least one (decision) inconsistency",
           ymin = 0, ymax = 85)
 
-ggsave("04analysis/03exploratory/fig4_perc_articles_errors_over_time.png", 
+ggsave("04analysis/03exploratory/fig3_perc_articles_errors_over_time.png", 
        width = 6.5, height = 4.5, units = "in")

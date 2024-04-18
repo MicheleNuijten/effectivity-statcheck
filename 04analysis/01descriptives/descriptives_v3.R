@@ -7,12 +7,12 @@ library(cowplot)
 # LOAD DATA --------------------------------------------------------------------
 
 # data for all articles, incl those without extracted statistics
-data_all <- read.table("03data/2023-06-15data_wrangled_with_missings.txt", header = TRUE)
-data_per_article_all <- read.table("03data/2023-06-15data_per_article_with_missings.txt", header = TRUE)
+data_all <- read.table("03data/2024-04-15data_wrangled_with_missings.txt", header = TRUE)
+data_per_article_all <- read.table("03data/2024-04-15data_per_article_with_missings.txt", header = TRUE)
 
 # data for articles with statistics
-data <- read.table("03data/2023-06-15data_wrangled_no_missings.txt", header = TRUE)
-data_per_article <- read.table("03data/2023-06-15data_per_article_with_stats.txt", header = TRUE)
+data <- read.table("03data/2024-04-15data_wrangled_no_missings.txt", header = TRUE)
+data_per_article <- read.table("03data/2024-04-15data_per_article_with_stats.txt", header = TRUE)
 
 # load list of titles of JPSP articles 2003-2013 in the ASC subsection
 asc_titles_df <- 
@@ -316,6 +316,7 @@ ggsave("04analysis/01descriptives/fig1_violin_plots.png",
 
 line_data <- 
   table3 %>%
+  filter(!is.na(journal)) %>%
   mutate(is_total = factor(ifelse(journal %in% c("statcheck_total", "control_total"), 
                                   "yes", "no")),
          is_statcheck_journal = factor(ifelse(journal %in% c("JESP", "PS", "statcheck_total"),
