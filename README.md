@@ -37,6 +37,8 @@ For the full report (incl. exploratory analyses), we created a new version of st
 
 Reasons for small changes and updates are either listed below the main overview table or, from January 13 2023 onwards, listed automatically in the form of GitHub commits.
 
+Note that there is a long gap between receiving reviewer comments and finalizing the report. This was due to MN's maternity leave from Nov 2023 to April 2024.
+
 |What?|When?|Who?|	
 |:--|:--|:--|
 |Performed power analysis|Nov 2022|MN|
@@ -51,6 +53,9 @@ Reasons for small changes and updates are either listed below the main overview 
 |Scraped articles with new version of statcheck|June 2023|MN|
 |Reran descriptive and confirmatory analyses & updated exploratory analyses|June-July 2023|MN|
 |Wrote and edited full report|July 2023|MN, JW|
+|Scraped articles again with improved script to extract dates (but same version of statcheck)|April 2024|MN|
+|Reran all analyses and updated results in manuscript|April 2024|MN|
+|Edited full report based on reviewer comments|Oct 2023/April 2024|MN, JW|
 
 ### Small changes and notes
 * 2-12-2022: In JEPG, there were some articles (39 articles in total) without HTML files. So, Afra created a list of articles without HTML files: [https://osf.io/mukxc](https://osf.io/mukxc)
@@ -89,17 +94,18 @@ The file descriptions below are organized in the same way as the components and 
 ### 03 Data
 | File Name | Description| Created By |
 |:--|:--|:--|
-| 00extract_dates.R   | Helper function with regexes to extract dates                         | MN         |
+| 00extract_dates_v2.R   | Helper function with regexes to extract dates                         | MN         |
 | 00extract_pattern.R | Helper function to extract a pattern from text                        | MN         |
 | 00html_to_txt_v2.R     | Helper function to convert html files to plain txt                    | MN         |
 | 00scrape_html_dir.R | Helper function that allows scraping a directory of html files        | MN         |
-| 01scrape_articles_v2.R | Function to run statcheck & scrape additional meta-data from articles | MN         |
-| 02data_wrangling_v2.R  | Function to clean & reorder raw data                                  | MN         |
-|2023-06-01scraped_articles_v2.txt|Raw statcheck data|MN|
-|2023-06-15data_per_article_with_missings.txt|Data organized per article, including articles without NHST results|MN|
-|2023-06-15data_per_article_with_stats.txt|Data organized per article, only including articles with NHST results|MN|
-|2023-06-15data_wrangled_no_missings.txt|Clean data organized per NHST result, only including articles with NHST results|MN|
-|2023-06-15data_wrangled_with_missings.txt|Clean data organized per NHST result, also including articles without NHST results (in these cases, only article level info is in the data frame)|MN|
+| 01scrape_articles_v3.R | Function to run statcheck & scrape additional meta-data from articles | MN         |
+| 02data_wrangling_v3.R  | Function to clean & reorder raw data                                  | MN         |
+|2024-04-15scraped_articles_v3.txt|Raw statcheck data|MN|
+|2024-04-15data_per_article_with_missings.txt|Data organized per article, including articles without NHST results|MN|
+|2024-04-15data_per_article_with_stats.txt|Data organized per article, only including articles with NHST results|MN|
+|2024-04-15data_wrangled_no_missings.txt|Clean data organized per NHST result, only including articles with NHST results|MN|
+|2024-04-15data_wrangled_with_missings.txt|Clean data organized per NHST result, also including articles without NHST results (in these cases, only article level info is in the data frame)|MN|
+|missing_htmls_jepg.docx/-.pdf|List of articles from JEPG with missing html file|MN|
 
 ### 04 Analysis
 
@@ -107,7 +113,7 @@ The file descriptions below are organized in the same way as the components and 
 
 | File Name | Description| Created By |
 |:--|:--|:--|
-|descriptives_V2.R|Main analysis file to create descriptive statistics, figures, and tables | MN |
+|descriptives_V3.R|Main analysis file to create descriptive statistics, figures, and tables | MN |
 |fig1_violin_plots.png|Figure 1|MN|
 |fig2_line_graph_means.png|Figure 2|MN|
 |table2.txt|Raw data from Table 2|MN|
@@ -117,7 +123,8 @@ The file descriptions below are organized in the same way as the components and 
 
 | File Name | Description| Created By |
 |:--|:--|:--|
-|confirmatory_analyses_v2.R|Main analysis script for confirmatory analyses|MN|
+|confirmatory_analyses_v3.R|Main analysis script for confirmatory analyses|MN|
+|illustration_logits_odds_probs.xlsx|Toy example to convert obtained regression coefficients from logits to probabilities|MN|
 |lm_dec_errors.rda|R data object with output of the multilevel logistic model estimating the probability of a decision error|MN|
 |lm_errors.rda|R data object with output of the multilevel logistic model estimating the probability of an error|MN|
 
@@ -126,8 +133,7 @@ The file descriptions below are organized in the same way as the components and 
 | File Name | Description| Created By |
 |:--|:--|:--|
 |bayes_factors.R|Calculating Bayes factors and posterior probabilities|MN|
-|fig3_nr_nhst_over_time.png|Figure 3|MN|
-|fig4_perc_articles_errors_over_time.png|Figure 4|MN|
+|fig3_perc_articles_errors_over_time.png|Figure 3|MN|
 |separate_journal_pairs.R|Fit regression models for journal pairs separately|MN|
 |trends_over_time.R|Calculate and visualize trends over time|MN|
 
