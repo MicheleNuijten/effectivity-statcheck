@@ -228,6 +228,9 @@ clipr::write_clip(table1)
 # copy to clipboard
 clipr::write_clip(table2)
 
+# save dataframe
+write.table(table2, "04analysis/01descriptives/table2.txt", row.names = FALSE)
+
 # TABLE 3 ----------------------------------------------------------------------
 
 # combine tables above to create table 3
