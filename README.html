@@ -410,6 +410,9 @@ and updated the data and analysis files accordingly.</p>
 <p>Reasons for small changes and updates are either listed below the
 main overview table or, from January 13 2023 onwards, listed
 automatically in the form of GitHub commits.</p>
+<p>Note that there is a long gap between receiving reviewer comments and
+finalizing the report. This was due to MN’s maternity leave from Nov
+2023 to April 2024.</p>
 <table>
 <colgroup>
 <col width="33%" />
@@ -492,14 +495,31 @@ updated exploratory analyses</td>
 <td align="left">July 2023</td>
 <td align="left">MN, JW</td>
 </tr>
+<tr class="odd">
+<td align="left">Scraped articles again with improved script to extract
+dates (but same version of statcheck)</td>
+<td align="left">April 2024</td>
+<td align="left">MN</td>
+</tr>
+<tr class="even">
+<td align="left">Reran all analyses and updated results in
+manuscript</td>
+<td align="left">April 2024</td>
+<td align="left">MN</td>
+</tr>
+<tr class="odd">
+<td align="left">Edited full report based on reviewer comments</td>
+<td align="left">Oct 2023/April 2024</td>
+<td align="left">MN, JW</td>
+</tr>
 </tbody>
 </table>
 <div id="small-changes-and-notes" class="section level3">
 <h3>Small changes and notes</h3>
 <ul>
-<li>2-12-2022: In JPEG, there were some articles (39 articles in total)
+<li>2-12-2022: In JEPG, there were some articles (39 articles in total)
 without HTML files. So, Afra created a list of articles without HTML
-files: <a href="https://catnip-ocelot-499.notion.site/Statcheck-io-the-articles-without-HTML-63712ffe996840dfb486b13a74bbed53">https://catnip-ocelot-499.notion.site/Statcheck-io-the-articles-without-HTML-63712ffe996840dfb486b13a74bbed53</a></li>
+files: <a href="https://osf.io/mukxc">https://osf.io/mukxc</a></li>
 <li>13-12-2022: MN realized that there was a mistake in the downloading
 instructions and JESP 2003-2013 weren’t downloaded yet. These remaining
 articles were downloaded by MN &amp; AK between 13-12 and 19-12.</li>
@@ -646,7 +666,7 @@ removed</td>
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">00extract_dates.R</td>
+<td align="left">00extract_dates_v2.R</td>
 <td align="left">Helper function with regexes to extract dates</td>
 <td align="left">MN</td>
 </tr>
@@ -667,44 +687,49 @@ html files</td>
 <td align="left">MN</td>
 </tr>
 <tr class="odd">
-<td align="left">01scrape_articles_v2.R</td>
+<td align="left">01scrape_articles_v3.R</td>
 <td align="left">Function to run statcheck &amp; scrape additional
 meta-data from articles</td>
 <td align="left">MN</td>
 </tr>
 <tr class="even">
-<td align="left">02data_wrangling_v2.R</td>
+<td align="left">02data_wrangling_v3.R</td>
 <td align="left">Function to clean &amp; reorder raw data</td>
 <td align="left">MN</td>
 </tr>
 <tr class="odd">
-<td align="left">2023-06-01scraped_articles_v2.txt</td>
+<td align="left">2024-04-15scraped_articles_v3.txt</td>
 <td align="left">Raw statcheck data</td>
 <td align="left">MN</td>
 </tr>
 <tr class="even">
-<td align="left">2023-06-15data_per_article_with_missings.txt</td>
+<td align="left">2024-04-15data_per_article_with_missings.txt</td>
 <td align="left">Data organized per article, including articles without
 NHST results</td>
 <td align="left">MN</td>
 </tr>
 <tr class="odd">
-<td align="left">2023-06-15data_per_article_with_stats.txt</td>
+<td align="left">2024-04-15data_per_article_with_stats.txt</td>
 <td align="left">Data organized per article, only including articles
 with NHST results</td>
 <td align="left">MN</td>
 </tr>
 <tr class="even">
-<td align="left">2023-06-15data_wrangled_no_missings.txt</td>
+<td align="left">2024-04-15data_wrangled_no_missings.txt</td>
 <td align="left">Clean data organized per NHST result, only including
 articles with NHST results</td>
 <td align="left">MN</td>
 </tr>
 <tr class="odd">
-<td align="left">2023-06-15data_wrangled_with_missings.txt</td>
+<td align="left">2024-04-15data_wrangled_with_missings.txt</td>
 <td align="left">Clean data organized per NHST result, also including
 articles without NHST results (in these cases, only article level info
 is in the data frame)</td>
+<td align="left">MN</td>
+</tr>
+<tr class="even">
+<td align="left">missing_htmls_jepg.docx/-.pdf</td>
+<td align="left">List of articles from JEPG with missing html file</td>
 <td align="left">MN</td>
 </tr>
 </tbody>
@@ -729,7 +754,7 @@ is in the data frame)</td>
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">descriptives_V2.R</td>
+<td align="left">descriptives_V3.R</td>
 <td align="left">Main analysis file to create descriptive statistics,
 figures, and tables</td>
 <td align="left">MN</td>
@@ -774,17 +799,23 @@ figures, and tables</td>
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">confirmatory_analyses_v2.R</td>
+<td align="left">confirmatory_analyses_v3.R</td>
 <td align="left">Main analysis script for confirmatory analyses</td>
 <td align="left">MN</td>
 </tr>
 <tr class="even">
+<td align="left">illustration_logits_odds_probs.xlsx</td>
+<td align="left">Toy example to convert obtained regression coefficients
+from logits to probabilities</td>
+<td align="left">MN</td>
+</tr>
+<tr class="odd">
 <td align="left">lm_dec_errors.rda</td>
 <td align="left">R data object with output of the multilevel logistic
 model estimating the probability of a decision error</td>
 <td align="left">MN</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left">lm_errors.rda</td>
 <td align="left">R data object with output of the multilevel logistic
 model estimating the probability of an error</td>
@@ -816,21 +847,16 @@ probabilities</td>
 <td align="left">MN</td>
 </tr>
 <tr class="even">
-<td align="left">fig3_nr_nhst_over_time.png</td>
+<td align="left">fig3_perc_articles_errors_over_time.png</td>
 <td align="left">Figure 3</td>
 <td align="left">MN</td>
 </tr>
 <tr class="odd">
-<td align="left">fig4_perc_articles_errors_over_time.png</td>
-<td align="left">Figure 4</td>
-<td align="left">MN</td>
-</tr>
-<tr class="even">
 <td align="left">separate_journal_pairs.R</td>
 <td align="left">Fit regression models for journal pairs separately</td>
 <td align="left">MN</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left">trends_over_time.R</td>
 <td align="left">Calculate and visualize trends over time</td>
 <td align="left">MN</td>
