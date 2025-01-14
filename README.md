@@ -106,6 +106,7 @@ The file descriptions below are organized in the same way as the components and 
 |2024-04-15data_wrangled_no_missings.txt|Clean data organized per NHST result, only including articles with NHST results|MN|
 |2024-04-15data_wrangled_with_missings.txt|Clean data organized per NHST result, also including articles without NHST results (in these cases, only article level info is in the data frame)|MN|
 |missing_htmls_jepg.docx/-.pdf|List of articles from JEPG with missing html file|MN|
+|codebook.xlsx|Codebook explaining the variables in the main data files|MN|
 
 ### 04 Analysis
 
